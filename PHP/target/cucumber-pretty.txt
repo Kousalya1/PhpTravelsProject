@@ -1,0 +1,23 @@
+@Regression
+Feature: Amazon Shopping feauture
+
+  Background:                                              [90m# PhpTravelsRegistration.feature:4[0m
+    [33mGiven [0m[33mLaunch PHP Travels page and validate page header[0m
+
+  @Test
+  Scenario: Complete the registration form in registration page                                                                                                         [90m# PhpTravelsRegistration.feature:8[0m
+    [33mWhen [0m[33mClick on register button in the header[0m
+    [33mThen [0m[33mEnter personal info firstname: "Kousalya" lastname: "K" email id: "kousalyakanikannan@gmail" phone num: ""[0m
+    [33mAnd [0m[33mEnter billing address Company name: "ssa" AddressOne: "address1" AddressTwo: "address2" City: "Chennai" State: "Tamil Nadu" Postcode: "123456" Country: "India"[0m
+    [33mAnd [0m[33mEnter additional required info, How did you find: "Google", Mobile num: "123456789"[0m
+    [33mThen [0m[33mValidate password text weak, moderate, strong[0m
+    [33mAnd [0m[33mEnter account security info Password: "1fh$$" Confirm password: "1fh$$"[0m
+    [33mAnd [0m[33mValidate and verify email invalid field[0m
+    [33mAnd [0m[33mVerify mobile number missing error[0m
+    [33mThen [0m[33mEnter personal info firstname: "Kousalya" lastname: "K" email id: "kousalyakanikannan@gmail.com" phone num: "123456789"[0m
+    [33mAnd [0m[33mEnter billing address Company name: "ssa" AddressOne: "address1" AddressTwo: "address2" City: "Chennai" State: "Tamil Nadu" Postcode: "123456" Country: "India"[0m
+    [33mAnd [0m[33mEnter additional required info, How did you find: "Google", Mobile num: "123456789"[0m
+    [33mAnd [0m[33mEnter account security info Password: "1fh$$" Confirm password: "1fh$$"[0m
+    [33mAnd [0m[33mDisable join our mailing list option[0m
+    [33mAnd [0m[33mSelect the captcha checkbox[0m
+    [33mAnd [0m[33mClick on Register button[0m
